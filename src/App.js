@@ -6,6 +6,8 @@ import NavMenu from './components/NavMenu.js'
 import Home from './components/Home.js'
 import About from './components/About.js'
 import Articles from './components/Articles.js'
+import Article from './components/Article.js'
+
 
 import {Route, Routes, NavLink} from 'react-router-dom'
 
@@ -21,9 +23,10 @@ function App() {
         </Routes> */}
         <Routes>   
             <Route path="/" element={<NavMenu/>}>
-                <Route index              element={<Home/>}     />
-                <Route path="/about"      element={<About/>}    />
-                <Route path="/articles"   element={<Articles/>} />
+                <Route index                    element={<Home/>}     />
+                <Route path="/about"            element={<About/>}    />
+                <Route path="/articles"         element={<Articles/>} />
+                <Route path="/articles/:id"     element={<Article/>} />
             </Route>     
         </Routes>
 
